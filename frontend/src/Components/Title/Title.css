@@ -1,0 +1,16 @@
+.titles{
+    text-align: center;
+    color: green;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin: 70px 0 30px;
+}
+.titles h2{
+    font-size: 2em;
+    color: green;
+    margin-top: 4px;
+    text-transform: none;
+}
+.titles p{
+    font-size: 1.2rem;
+}

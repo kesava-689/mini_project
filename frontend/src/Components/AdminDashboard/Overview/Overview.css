@@ -1,0 +1,47 @@
+.overview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+    padding: 2rem;
+  }
+  
+  .overview-card {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 16px;
+    padding: 1rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .overview-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  .icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-right: 1rem;
+    font-size: 22px;
+  }
+  
+  .text h3 {
+    margin: 0;
+    font-size: 1.6rem;
+    color: #333;
+  }
+  
+  .text p {
+    margin: 4px 0 0;
+    font-size: 0.95rem;
+    color: #777;
+  }
+  

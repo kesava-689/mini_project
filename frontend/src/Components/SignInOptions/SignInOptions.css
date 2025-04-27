@@ -1,0 +1,112 @@
+  .signin-options {
+    text-align: center;
+    min-height: 100vh;
+    width: 100%;
+    margin: 0 auto;
+    padding: 150px 20px 40px;
+    background: url('../../assets/Background_image_1.png') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .signin-options h2{
+    color: aliceblue;
+  }
+  .signin-options p{
+    color: aliceblue;
+    font-size: 1.5rem;
+  }
+ 
+  
+  /* Title & Description */
+  h2 {
+    color: green;
+    margin-bottom: 10px;
+    font-size: 2rem;
+  }
+  
+  .signin-description {
+    color: black;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  /* Cards Container */
+  .signin-content {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+  
+  /* Individual Cards */
+  .signin-card {
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(24, 14, 14, 0.1);
+    width: 300px;
+    text-align: center;
+    padding: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .signin-card:hover {
+    background-color: rgb(28, 80, 112);
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(24, 5, 5, 0.2);
+  }
+  
+  /* Card Image */
+  .card-image img {
+    width: 100%;
+    object-fit: contain;
+    display: block;
+    border-radius: 5px;
+  }
+  
+  /* Card Title */
+  h3 {
+    font-size: 2rem;
+    color: whitesmoke;
+    margin-top: 15px;
+  }
+  
+  /* Card Description */
+  .signin-card p {
+    font-size: 1.2rem;
+    color: whitesmoke;
+    margin-top: 10px;
+  }
+  .signin-card button{
+    background-color: #2c3e50;
+    width: 90px;
+    color: #fff;
+  }
+  
+  /* Responsive */
+  @media (max-width: 800px) {
+    .signin-options h2{
+      font-size: 1.5rem;
+    }
+    .signin-description{
+      padding-left: 40px;
+      padding-right: 40px;
+      font-size: 1rem;
+    }
+    .signin-content {
+      flex-direction: column;
+      align-items: center;
+    }
+    .signin-content p{
+      padding-left: 20px;
+      font-size: 1px;
+    }
+    .signin-card {
+      width: 90%;
+      max-width: 350px;
+    }
+  }
+  

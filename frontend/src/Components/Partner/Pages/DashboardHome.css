@@ -1,0 +1,111 @@
+/* DashboardHome.css */
+
+.dashboard-Home {
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  font-family: "Segoe UI", sans-serif;
+}
+
+.dashboard-Home h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: white;
+  margin-bottom: 2rem;
+  animation: fadeInDown 0.5s ease-in-out;
+}
+
+.dashboard-Home .metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  justify-content: center;
+}
+
+.dashboard-Home .metric-card {
+  flex: 1;
+  min-width: 240px;
+  background-color: #ffffff;
+  padding: 1.2rem 1.5rem;
+  border-left: 5px solid #60a5fa;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  color: #333;
+}
+
+.dashboard-Home .metric-card:hover {
+  transform: translateY(-5px);
+  background-color: #e0f2fe;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-Home .charts-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.dashboard-Home .chart-container {
+  flex: 1;
+  min-width: 300px;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 0.8s ease-in-out;
+  background-color: whitesmoke;
+}
+
+.dashboard-Home .chart-container:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.dashboard-Home .chart-container h3 {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #222;
+  margin-bottom: 1rem;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard-Home .metrics {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dashboard-Home .charts-section {
+    flex-direction: column;
+    align-items: center;
+  }
+}

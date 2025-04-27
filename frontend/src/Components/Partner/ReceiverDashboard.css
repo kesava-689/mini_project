@@ -1,0 +1,88 @@
+/* Layout structure */
+.Receiver-dashboard-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+    background: url('../../assets/Background_image_1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  /* Top Navbar */
+  .dashboard-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #014ff9;
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logout-btn {
+    background: #ef4444;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .logout-btn:hover {
+    background: #dc2626;
+  }
+  
+  /* Main dashboard body layout */
+  .dashboard-body {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+  }
+  
+  /* Sidebar */
+  .dashboard-sidebar {
+    width: 250px;
+    background-color: #1e293b;
+    color: #f1f5f9;
+    padding: 2rem 1rem;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+  }
+  .dashboard-sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .dashboard-sidebar li {
+    margin: 1rem 0;
+    padding: 0.75rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .dashboard-sidebar li:hover {
+    background-color: #2563eb;
+    color: #fff;
+    font-weight: 500;
+  }
+  
+  /* Main Content */
+.dashboard-main {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+  color: #1f2937;
+  margin: 1rem;
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+}
+
+.dashboard-main h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}

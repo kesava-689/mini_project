@@ -1,0 +1,28 @@
+.volunteer-page-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-image: url('../../assets/Background_image_8.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.volunteer-main {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  backdrop-filter: blur(4px);
+  border-radius: 12px;
+  margin: 1rem;
+}
+
+.volunteer-content {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

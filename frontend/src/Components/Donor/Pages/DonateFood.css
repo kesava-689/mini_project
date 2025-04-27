@@ -1,0 +1,82 @@
+/* DonateFood.css */
+
+.donate-food-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url("../../assets/A_photograph_for_promoting_food_donation_features_.png") no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    box-sizing: border-box;
+  }
+  
+  .donate-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+  }
+  
+  .donate-form {
+    position: relative;
+    z-index: 1;
+    padding: 2.5rem;
+    border-radius: 16px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .donate-form h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #2e7d32;
+    font-size: 1.8rem;
+  }
+  
+  .donate-form input,
+  .donate-form textarea,
+  .donate-form select {
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    resize: none;
+    width: 100%;
+  }
+  
+  .donate-form textarea {
+    min-height: 100px;
+  }
+  
+  .donate-form .submit-btn{
+    padding: 0.75rem 1rem;
+    width: 10rem;
+    background-color: #2e7d32;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .donate-form .submit-btn:hover {
+    background-color: #1b5e20;
+  }
+  @media (max-width: 600px) {
+    .donate-form {
+      padding: 1.5rem;
+    }
+  }
+  
+  

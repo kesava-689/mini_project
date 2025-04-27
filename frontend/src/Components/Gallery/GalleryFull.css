@@ -1,0 +1,103 @@
+/* GalleryFull.css */
+
+/* Full Page Container */
+.gallery-full-container {
+  min-height: 100vh;
+  padding: 100px 40px 60px 40px; /* top padding for navbar space */
+  background: url('../../assets/Background_image_6.png') no-repeat center center fixed;
+  background-size: cover;
+  animation: gradientShift 10s ease infinite;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+}
+
+/* Background Animation */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Close Button */
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  background: whitesmoke;
+  color: black;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease, transform 0.2s ease;
+  z-index: 1000;
+}
+
+.close-button:hover {
+  background-color: darkblue;
+  transform: rotate(90deg);
+}
+
+/* Heading */
+.gallery-full-container h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: whitesmoke;
+  text-align: center;
+}
+
+/* Gallery Grid */
+.gallery-grid {
+  width: 100%;
+  max-width: 1300px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Images */
+.gallery-grid img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Image Hover Effect */
+.gallery-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+
+  .gallery-full-container h2 {
+    font-size: 2rem;
+  }
+
+  .gallery-grid img {
+    height: 200px;
+  }
+}

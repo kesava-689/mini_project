@@ -1,0 +1,134 @@
+/* Fullscreen dark overlay */
+.admin-login-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.4s ease-in-out;
+  z-index: 1000;
+}
+
+/* Modal container */
+.admin-login-modal {
+  background: #ffffff;
+  padding: 2rem 2.5rem;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  animation: slideUp 0.5s ease-out;
+  position: relative;
+}
+
+/* Modal title */
+.admin-login-modal h2 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #333;
+  font-size: 1.75rem;
+}
+
+/* Inputs */
+.admin-login-modal input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  outline: none;
+}
+
+.admin-login-modal input:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 5px rgba(79, 70, 229, 0.3);
+}
+
+/* Buttons */
+.login-btn,
+.cancel {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+.login-btn {
+  background-color: #4f46e5;
+  color: white;
+}
+
+.login-btn:hover {
+  background-color: #3730a3;
+  transform: translateY(-2px);
+}
+
+.cancel {
+  background-color: #e5e7eb;
+  color: #333;
+}
+
+.cancel:hover {
+  background-color: #d1d5db;
+  transform: translateY(-2px);
+}
+
+/* Close button (top right corner) */
+.close-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.8rem;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: #888;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #111;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .admin-login-modal {
+    margin: 0 1rem;
+    padding: 1.5rem;
+  }
+
+  .admin-login-modal h2 {
+    font-size: 1.5rem;
+  }
+}

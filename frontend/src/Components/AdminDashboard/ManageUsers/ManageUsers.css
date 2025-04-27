@@ -1,0 +1,137 @@
+/* ManageUsers.css */
+
+.manage-users {
+  padding: 2rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+}
+
+.manage-users h2 {
+  text-align: center;
+  color: whitesmoke;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.manage-users p {
+  text-align: center;
+  font-size: 1.1rem;
+  color: whitesmoke;
+}
+
+.manage-users table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+  animation: fadeIn 0.8s ease;
+}
+
+.manage-users th,
+.manage-users td {
+  text-align: left;
+  padding: 1rem;
+}
+
+.manage-users thead {
+  background-color: #34495e;
+  color: #ffffff;
+}
+
+.manage-users tbody tr {
+  border-bottom: 1px solid #ecf0f1;
+  transition: background-color 0.3s ease;
+}
+
+.manage-users tbody tr:hover {
+  background-color: #f0f6ff;
+}
+
+.manage-users td[data-label] {
+  position: relative;
+}
+
+.approve-btn,
+.reject-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.approve-btn {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.approve-btn:hover {
+  background-color: #27ae60;
+  transform: scale(1.05);
+}
+
+.reject-btn {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.reject-btn:hover {
+  background-color: #c0392b;
+  transform: scale(1.05);
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .manage-users table,
+  .manage-users thead,
+  .manage-users tbody,
+  .manage-users th,
+  .manage-users td,
+  .manage-users tr {
+    display: block;
+    width: 100%;
+  }
+
+  .manage-users thead {
+    display: none;
+  }
+
+  .manage-users tr {
+    margin-bottom: 1rem;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 1rem;
+  }
+
+  .manage-users td {
+    text-align: right;
+    padding: 0.5rem 1rem;
+    position: relative;
+  }
+
+  .manage-users td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 1rem;
+    text-align: left;
+    font-weight: bold;
+    color: #7f8c8d;
+  }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

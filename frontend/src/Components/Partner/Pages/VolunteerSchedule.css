@@ -1,0 +1,72 @@
+.schedule-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  font-family: "Arial", sans-serif;
+  color: #333;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.loading-text, .no-requests {
+  font-size: 1.2rem;
+  color: white;
+  font-weight: 500;
+  text-align: center;
+}
+
+.schedule-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.donation-card {
+  background: #f9fafb;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.donation-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.donation-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #4a5568;
+  margin-bottom: 1rem;
+}
+
+.donation-card p {
+  font-size: 1rem;
+  color: #718096;
+  margin-bottom: 0.5rem;
+}
+
+.donation-card p:last-child {
+  margin-bottom: 1.5rem;
+}
+
+.volunteer-info {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #5a67d8;
+}
+
+@media (min-width: 768px) {
+  .schedule-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}

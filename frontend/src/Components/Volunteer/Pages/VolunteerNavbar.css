@@ -1,0 +1,60 @@
+.donor-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  background-color: rgba(90, 177, 234, 0.9); /* slightly transparent */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  height: 60px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.donor-navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.donor-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.system-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+}
+
+.donor-navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.donor-name {
+  font-size: 16px;
+  color: white;
+  font-weight: 500;
+}
+
+.login-btn,
+.logout-btn {
+  padding: 6px 14px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #2563eb;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.login-btn:hover,
+.logout-btn:hover {
+  background-color: #1d4ed8;
+}

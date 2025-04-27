@@ -1,0 +1,86 @@
+.pickup-schedule {
+  background-color: #0f172a; /* slate-900 */
+  padding: 2rem;
+  border-radius: 1rem;
+  color: #f8fafc; /* slate-50 */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  animation: fadeIn 0.6s ease-in;
+  max-width: 900px;
+  margin: auto;
+}
+
+.pickup-schedule h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  color: #38bdf8; /* sky-400 */
+  border-bottom: 2px solid #7698ba;
+  padding-bottom: 0.5rem;
+}
+
+.pickup-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.pickup-card {
+  background-color: #3c3d3e; /* slate-800 */
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border-left: 5px solid transparent;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #f4f5f6; /* slate-200 */
+}
+.pickup-list p {
+    color: whitesmoke;
+}
+
+.pickup-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+}
+
+.pickup-card.Scheduled {
+  border-left-color: #facc15; /* yellow-400 */
+}
+
+.pickup-card.Completed {
+  border-left-color: #4ade80; /* green-400 */
+  opacity: 0.9;
+}
+
+.pickup-card h3 {
+  font-size: 1.3rem;
+  color: #fbbf24; /* amber-400 */
+  margin-bottom: 0.5rem;
+}
+
+.pickup-card p {
+  margin: 0.35rem 0;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.mark-btn {
+  margin-top: 1rem;
+  background-color: #22c55e; /* green-500 */
+  color: #f1f5f9; /* slate-100 */
+  padding: 0.5rem 1.2rem;
+  font-size: 0.95rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+.mark-btn:hover {
+  background-color: #16a34a; /* green-600 */
+  transform: scale(1.03);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

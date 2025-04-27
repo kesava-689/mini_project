@@ -1,0 +1,154 @@
+/* AboutWebsite.css */
+
+/* Main background wrapper */
+.about-website-completely {
+  min-height: 100vh;
+  background: url('../../assets/Background_image_6.png') no-repeat center center fixed;
+  background-size: cover;
+  animation: backgroundShift 8s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 100px; /* leaves space for navbar */
+}
+
+/* Background Animation */
+@keyframes backgroundShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Content Box */
+.about-food-waste {
+  width: 90%;
+  max-width: 900px;
+  background: #ffffffee;
+  padding: 40px;
+  margin: 20px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  animation: fadeSlideUp 1s ease forwards;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Fade Up Animation */
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Close Button */
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: whitesmoke;
+  color: black;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.close-button:hover {
+  background: darkblue;
+}
+
+/* Heading Main */
+.about-food-waste h1 {
+  font-size: 2.8rem;
+  color: #2c3e50;
+  margin-bottom: 25px;
+  text-align: center;
+  font-weight: 700;
+}
+
+/* Section Headings */
+.about-food-waste h2 {
+  font-size: 1.8rem;
+  color: #34495e;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.about-food-waste h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #3498db;
+  margin-top: 8px;
+  border-radius: 5px;
+}
+
+/* Paragraph Text */
+.about-food-waste p {
+  font-size: 1.15rem;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+/* Unordered List */
+.about-food-waste ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.about-food-waste li {
+  background: #3498db10;
+  margin-bottom: 12px;
+  padding: 12px 20px;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+  font-size: 1.05rem;
+  color: #333;
+  position: relative;
+  padding-left: 30px;
+}
+
+/* Bullet Decoration */
+.about-food-waste li::before {
+  content: '✔';
+  position: absolute;
+  left: 10px;
+  color: #3498db;
+  font-size: 1.2rem;
+}
+
+/* Hover effect for list */
+.about-food-waste li:hover {
+  background: #3498db20;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-food-waste {
+    padding: 30px 20px;
+    margin: 20px;
+  }
+
+  .about-food-waste h1 {
+    font-size: 2rem;
+  }
+
+  .about-food-waste h2 {
+    font-size: 1.5rem;
+  }
+}

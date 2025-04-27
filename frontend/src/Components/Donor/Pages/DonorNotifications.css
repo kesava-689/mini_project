@@ -1,0 +1,94 @@
+/* DonorNotifications.css */
+
+.notifications-container {
+  max-width: 800px;
+  margin: 4rem auto;
+  padding: 2.5rem 3rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.notifications-container h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+  color: white;
+}
+
+.notification-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.notification-item {
+  background: #f8f9fa;
+  padding: 1.2rem 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.notification-item:hover {
+  background-color: #e3f2fd;
+  transform: translateY(-2px);
+}
+
+.notification-item.unread {
+  border-left: 6px solid #3498db;
+  font-weight: 600;
+}
+
+.notification-item.read {
+  opacity: 0.7;
+}
+
+.notification-item p {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.05rem;
+  color: #34495e;
+}
+
+.notification-item small {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+}
+
+.unread-count {
+  margin-top: 2rem;
+  text-align: center;
+  background: #ffeaa7;
+  padding: 1rem;
+  border-radius: 12px;
+  font-weight: 600;
+  color: #d35400;
+  font-size: 1.1rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .notifications-container {
+    margin: 2rem 1rem;
+    padding: 2rem;
+  }
+
+  .notification-item {
+    padding: 1rem;
+  }
+}

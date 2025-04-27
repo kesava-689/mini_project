@@ -1,0 +1,208 @@
+
+
+.donations-container {
+  padding: 2rem 1rem;
+  min-height: 100vh;
+  font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  animation: fadeSlideIn 0.6s ease-in-out;
+}
+
+.donations-container h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  color: white;
+  margin-bottom: 2.5rem;
+  font-weight: 700;
+  animation: fadeIn 1s ease;
+}
+
+.donations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.donation-card {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 18px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+  transition: all 0.3s ease;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.donation-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.donation-card h3 {
+  margin-top: 0;
+  color: #34495e;
+  font-size: 1.4rem;
+}
+
+.donation-card p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.donation-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.donation-actions button {
+  padding: 0.6rem 1.2rem;
+  font-size: 0.95rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  flex: 1;
+  min-width: 120px;
+}
+
+.approve-btn {
+  background-color: #28a745;
+  color: #ffffff;
+}
+
+.approve-btn:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+.reject-btn {
+  background-color: #dc3545;
+  color: #ffffff;
+}
+
+.reject-btn:hover {
+  background-color: #c82333;
+  transform: scale(1.05);
+}
+
+.donation-actions button:not(.approve-btn):not(.reject-btn) {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+.donation-actions button:not(.approve-btn):not(.reject-btn):hover {
+  background-color: #0069d9;
+  transform: scale(1.05);
+}
+
+/* Modal styling */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  background-color: #ffffff;
+  padding: 2rem 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  z-index: 1000;
+  animation: popUp 0.4s ease-in-out;
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+}
+
+.modal h3 {
+  margin-bottom: 0.8rem;
+  color: #2c3e50;
+  font-size: 1.5rem;
+}
+
+.modal p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.modal button {
+  margin: 0.8rem 0.5rem 0 0.5rem;
+  padding: 0.6rem 1.4rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.modal button:first-of-type {
+  background-color: #28a745;
+  color: #ffffff;
+}
+
+.modal button:first-of-type:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+.modal button:last-of-type {
+  background-color: #6c757d;
+  color: white;
+}
+
+.modal button:last-of-type:hover {
+  background-color: #5a6268;
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popUp {
+  from {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .donations-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .donation-actions {
+    flex-direction: column;
+  }
+
+  .donation-actions button {
+    width: 100%;
+  }
+}

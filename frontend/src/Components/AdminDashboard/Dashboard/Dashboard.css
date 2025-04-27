@@ -1,0 +1,115 @@
+/* Dashboard.css */
+
+.dashboard-container {
+  padding: 2rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+}
+
+.dashboard-container h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: whitesmoke;
+  margin-bottom: 2rem;
+  animation: fadeInDown 1s ease-out;
+}
+
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+}
+
+.stats-card {
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 1s ease-in;
+}
+
+.stats-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.stats-card h3 {
+  font-size: 1.8rem;
+  color: #34495e;
+  margin-bottom: 0.5rem;
+}
+
+.stats-card p {
+  font-size: 2.2rem;
+  color: #27ae60;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.stats-card h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #2980b9;
+}
+
+.stats-card ul {
+  list-style: none;
+  padding-left: 1rem;
+  margin: 0;
+}
+
+.stats-card ul li {
+  font-size: 1.1rem;
+  color: #2c3e50;
+  padding: 0.3rem 0;
+  transition: color 0.2s ease;
+}
+
+.stats-card ul li:hover {
+  color: #5d900b;
+  cursor: default;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 1rem;
+  }
+
+  .stats-card {
+    padding: 1rem;
+  }
+
+  .stats-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .stats-card p {
+    font-size: 1.8rem;
+  }
+}

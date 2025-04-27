@@ -1,0 +1,35 @@
+.donor-page-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-image: url('../../assets/Background_image_7.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.donor-navbar {
+  height: 70px; /* Fixed height */
+  flex-shrink: 0; /* Do not shrink */
+}
+
+.donor-main {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  backdrop-filter: blur(4px);
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.donor-content {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}

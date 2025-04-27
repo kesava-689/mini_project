@@ -1,0 +1,73 @@
+.donor-sidebar {
+  width: 300px;
+  min-width: 300px;
+  background-color: white;
+  color: black;
+  padding: 1.5rem 1rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 100%;
+}
+
+.donor-sidebar h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  border-bottom: 1px solid #4b5563;
+  padding-bottom: 0.5rem;
+  color: black;
+}
+
+.sidebar-btn {
+  padding: 0.75rem 1rem;
+  background-color: white;
+  color: black;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar-btn:hover {
+  background-color: #e5e7eb;
+  color: black;
+}
+
+.sidebar-btn.active {
+  background-color: #cbd5e1;
+  color: black;
+}
+
+/* Responsive Sidebar */
+@media (max-width: 768px) {
+  .donor-sidebar {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background-color: white;
+  }
+
+  .donor-sidebar h3 {
+    display: none;
+  }
+
+  .sidebar-btn {
+    flex: 1 1 45%;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar-btn {
+    flex: 1 1 48%;
+    font-size: 0.8rem;
+    padding: 10px;
+  }
+}
