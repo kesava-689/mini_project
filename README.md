@@ -80,7 +80,4 @@ A full-stack web application designed to reduce food wastage by connecting **Don
 - Nodemailer
 - Socket.io
 
----
-
-## 📁 Folder Structure
 
