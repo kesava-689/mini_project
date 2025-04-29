@@ -152,3 +152,55 @@
 
 
 
+
+
+
+
+
+  @media (max-width: 768px) {
+    .chatbot-panel {
+      width: 80%;
+      right: -80%;
+      border-top-left-radius: 12px;
+      border-bottom-left-radius: 12px;
+    }
+  
+    .chatbot-panel.open {
+      right: 0;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .chatbot-panel {
+      width: 100%;
+      right: -100%;
+      border-radius: 0;
+    }
+  
+    .chatbot-panel.open {
+      right: 0;
+    }
+  
+    .chatbot-toggle-btn {
+      width: 48px;
+      height: 48px;
+      bottom: 20px;
+      right: 20px;
+    }
+  
+    .hero-text h1 {
+      font-size: 32px;
+      line-height: 1.2;
+    }
+  
+    .hero-text p {
+      font-size: 0.95rem;
+      padding: 0 10px;
+    }
+  
+    .btn {
+      font-size: 14px;
+      padding: 10px 20px;
+    }
+  }
+  

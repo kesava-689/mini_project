@@ -152,55 +152,102 @@
     }
   }
   
-  /* Responsive Design */
-  @media (max-width: 1024px) {
-    .volunteer-login-container {
-        width: 80%;
-        height: auto;
-        padding: 20px;
-    }
-    .login-popup {
-      width: 80%;
+  /* ------- RESPONSIVE DESIGN ------- */
+
+/* 🔹 For tablets & medium screens (1024px and smaller) */
+@media (max-width: 1024px) {
+  .volunteer-login-container {
+      width: 100%;
+      height: auto;
+      padding: 40px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .login-popup {
+      width: 85%;
       height: auto;
       flex-direction: column;
-    }
-  
-    .login-left {
-      width: 100%;
-      height: 250px;
-    }
-  
-    .login-right {
-      width: 100%;
-      padding: 20px;
-    }
   }
-  
-  @media (max-width: 600px) {
-    .volunteer-login-container {
-      display: block;
-    }
-    .login-popup {
-      width: 90%;
-      height: 80%;
-    }
-  
-    .login-left {
+
+  .login-left {
+      width: 100%;
+      height: 280px;
+  }
+
+  .login-right {
+      width: 100%;
+      padding: 30px;
+  }
+
+  .login-right h2 {
+      font-size: 32px;
+  }
+}
+
+/* 🔹 For mobile screens (600px and smaller) */
+@media (max-width: 600px) {
+  .volunteer-login-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+  }
+
+  .login-popup {
+      width: 95%;
+      height: auto;
+      flex-direction: column;
+      padding: 15px;
+  }
+
+  .login-left {
       height: 200px;
-    }
-  
-    .login-right h2 {
-      font-size: 20px;
-    }
-  
-    .input-group input {
-      font-size: 14px;
-      padding: 8px;
-    }
-  
-    .login-btn {
+  }
+
+  .login-right {
+      padding: 20px;
+  }
+
+  .login-right h2 {
+      font-size: 22px;
+  }
+
+  .input-group input {
       font-size: 14px;
       padding: 10px;
-    }
   }
-  
+
+  .login-btn {
+      font-size: 14px;
+      padding: 12px;
+  }
+}
+
+/* 🔹 For very small mobile screens (400px and smaller) */
+@media (max-width: 400px) {
+  .login-popup {
+      width: 100%;
+      height: auto;
+      padding: 10px;
+  }
+
+  .login-left {
+      height: 150px;
+  }
+
+  .login-right h2 {
+      font-size: 18px;
+  }
+
+  .input-group input {
+      font-size: 12px;
+      padding: 8px;
+  }
+
+  .login-btn {
+      font-size: 12px;
+      padding: 10px;
+  }
+}

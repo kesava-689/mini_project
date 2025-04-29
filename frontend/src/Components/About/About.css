@@ -1,62 +1,105 @@
-.about{
+.about {
     margin: 100px auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 90%;
 }
-.about-left{
+
+.about-left {
     flex-basis: 40%;
     position: relative;
 }
-.about-right{
+
+.about-right {
     flex-basis: 56%;
 }
-.about-img{
+
+.about-img {
     width: 100%;
     border-radius: 10px;
 }
-.play-icon{
+
+.play-icon {
     width: 60px;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     cursor: pointer;
 }
-.about h3{
+
+.about h3 {
     text-align: center;
     font-weight: 600;
     font-size: 2rem;
-    font-weight: 16px;
     color: #212EA0;
 }
-.about h2{
-    font-size: 35px;
-    text-align: center;
+
+.about h2 {
     font-size: 2rem;
+    text-align: center;
     color: #000F38;
     margin: 10px 0;
     max-width: 400px;
 }
-.about p{
-    color: black;
+
+.about p {
+    color: rgb(32, 31, 31);
     margin-top: 15px;
-    font-size: 1.4rem;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: left;
 }
-/* --------- media query ----------- */
+
+/* --------- Tablet Responsive (Already good) ----------- */
 @media (max-width: 800px) {
-    .about{
+    .about {
         flex-direction: column;
+        text-align: center;
     }
-    .about-left{
-        margin: 20px;
+    .about-left {
+        margin: 20px 0;
         order: 2;
         flex-basis: 100%;
     }
-    .about-right{
+    .about-right {
         flex-basis: 100%;
+    }
+    .about p {
+        text-align: center;
+        font-size: 1.2rem;
+    }
+}
+
+/* --------- Extra Mobile Responsive (New) ----------- */
+@media (max-width: 480px) {
+    .about {
+        margin: 50px auto;
+        width: 95%;
+    }
+
+    .play-icon {
+        width: 45px;
+    }
+
+    .about h3 {
+        font-size: 1.5rem;
+    }
+
+    .about h2 {
+        font-size: 1.5rem;
+        margin: 8px 0;
+    }
+
+    .about p {
+        font-size: 1rem;
+        margin-top: 10px;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .about-img {
+        border-radius: 8px;
     }
 }

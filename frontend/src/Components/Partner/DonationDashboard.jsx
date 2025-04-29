@@ -3,16 +3,18 @@ import "./DonationDashboard.css";
 import React, { useState } from "react";
 
 import DashboardHome from "./Pages/DashboardHome";
-import DonorChatBox from "./Pages/DonorChatBox";
-import PostDonationForm from "./Pages/PostDonationForm";
-import ViewRequests from "./Pages/ViewRequests";
-import { useNavigate } from "react-router-dom";
-import UpdatePassword from "./Pages/EditProfile";
 import DonorChat from "./Pages/DonorChatBox";
+import PostDonationForm from "./Pages/PostDonationForm";
+import UpdatePassword from "./Pages/EditProfile";
+import ViewRequests from "./Pages/ViewRequests";
+// Importing the menu icon for mobile view
+import menuIcon from "../../assets/menu.png";
+import { useNavigate } from "react-router-dom";
 
 const DonationsDashboard = () => {
   const navigate = useNavigate();
   const [activeSection, setActiveSection] = useState("home");
+  const [sidebarOpen, setSidebarOpen] = useState(false); // State to toggle sidebar visibility
 
   const renderContent = () => {
     switch (activeSection) {
@@ -21,41 +23,61 @@ const DonationsDashboard = () => {
       case "post":
         return <PostDonationForm restaurantId="resto123" />;
       case "requests":
-        return <ViewRequests restaurantId="resto123" />
+        return <ViewRequests restaurantId="resto123" />;
       case "profile":
-        return <UpdatePassword/>
+        return <UpdatePassword />;
       case "messages":
         return <DonorChat />;
       default:
         return <p>Select an option from the sidebar.</p>;
     }
   };
-  
+
+  const handleMenuClick = () => {
+    setSidebarOpen(!sidebarOpen); // Toggle the sidebar on mobile
+  };
+
+  const handleSectionChange = (section) => {
+    setActiveSection(section);
+    setSidebarOpen(false); // Close sidebar on section change
+  };
 
   return (
     <div className="Donor-dashboard-wrapper">
       {/* Top Navbar */}
-      <header className="dashboard-navbar">
-        <h1>🍽️ Donor Dashboard</h1>
-        <button onClick={() => navigate("/")} className="logout-btn">Logout</button>
+      <header className="donor-dashboard-navbar">
+        <div className="donor-navbar-left">
+          {/* Menu Icon for Mobile */}
+          <img
+            src={menuIcon}
+            alt="Menu"
+            className="menu-icon"
+            onClick={handleMenuClick} 
+          />
+          <h1>🍽️ Donor Dashboard</h1>
+        </div>
+        <div className="donor-navbar-right">
+          {/* Logout Button */}
+          <button onClick={() => navigate("/")} className="logout-btn">
+            Logout
+          </button>
+        </div>
       </header>
 
-      <div className="dashboard-body">
+      <div className="donor-dashboard-body">
         {/* Sidebar */}
-        <aside className="dashboard-sidebar">
+        <aside className={`dashboard-sidebar ${sidebarOpen ? "open" : ""}`}>
           <ul>
-            <li onClick={() => setActiveSection("home")}>Dashboard Home</li>
-            <li onClick={() => setActiveSection("post")}>Post Donation</li>
-            <li onClick={() => setActiveSection("requests")}>View Requests</li>
-            <li onClick={() => setActiveSection("profile")}>Edit Profile</li>
-            <li onClick={() => setActiveSection("messages")}>Messages</li>
+            <li onClick={() => handleSectionChange("home")}>Dashboard Home</li>
+            <li onClick={() => handleSectionChange("post")}>Post Donation</li>
+            <li onClick={() => handleSectionChange("requests")}>View Requests</li>
+            <li onClick={() => handleSectionChange("profile")}>Edit Profile</li>
+            <li onClick={() => handleSectionChange("messages")}>Messages</li>
           </ul>
         </aside>
 
         {/* Main Content */}
-        <main className="donor-dashboard-main">
-          {renderContent()}
-        </main>
+        <main className="donor-dashboard-main">{renderContent()}</main>
       </div>
     </div>
   );

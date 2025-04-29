@@ -1,6 +1,5 @@
 .admin-section {
     padding: 2rem;
-    background-color: #f9f9f9;
     min-height: 100vh;
     font-family: Arial, sans-serif;
   }
@@ -9,7 +8,13 @@
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
     text-align: center;
-    color: #333;
+    color: white;
+  }
+  .admin-section p{
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: white;
   }
   
   .volunteer-table {

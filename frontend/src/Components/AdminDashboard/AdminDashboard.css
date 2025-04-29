@@ -1,4 +1,4 @@
-
+/* ---------- AdminWrapper Styles ---------- */
 .admin-wrapper {
   display: flex;
   flex-direction: column;
@@ -11,43 +11,48 @@
   background-attachment: fixed;
 }
 
-/* Top Navbar */
+/* ---------- Top Navbar Styles ---------- */
 .admin-navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(1, 79, 249, 0.9); /* Slightly transparent to show bg */
+  background-color: rgba(1, 79, 249, 0.9);
   color: white;
   padding: 1rem 2rem;
   font-size: 1.2rem;
   font-weight: bold;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1002;
 }
 
-.logout-btn {
-  background: #ef4444;
-  color: white;
-  padding: 0.5rem 1rem;
-  border: none;
-  font-weight: bold;
-  border-radius: 8px;
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.menu-icon {
+  width: 30px;
+  height: 30px;
   cursor: pointer;
-  transition: background 0.3s;
 }
 
-.logout-btn:hover {
-  background: #dc2626;
+.navbar-right .welcome{
+  display: flex;
+  font-size: 1rem;
+  color: white;
 }
 
+
+/* ---------- Body Layout ---------- */
 .admin-body {
   display: flex;
   flex: 1;
   overflow: hidden;
-  backdrop-filter: blur(6px);
-  border-radius: 10px;
-  margin: 10px;
 }
 
+/* ---------- Sidebar Styles ---------- */
 .admin-sidebar {
   width: 250px;
   background-color: whitesmoke;
@@ -55,6 +60,8 @@
   padding: 2rem 1rem;
   box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
   border-radius: 10px 0 0 10px;
+  transition: transform 0.3s ease-in-out;
+  height: calc(100vh - 80px); /* Adjust based on header height */
 }
 
 .admin-sidebar ul {
@@ -77,15 +84,68 @@
   font-weight: 500;
 }
 
+/* Sidebar hidden on mobile */
+.admin-sidebar {
+  transform: translateX(-100%);
+  position: fixed;
+  top: 80px; /* height of navbar */
+  left: 0;
+  background-color: whitesmoke;
+  width: 220px;
+  z-index: 1000;
+  height: calc(100vh - 80px);
+}
+
+/* When sidebar is open */
+.admin-sidebar.open {
+  transform: translateX(0);
+}
+
+/* ---------- Main Content Styles ---------- */
 .admin-main {
   flex: 1;
   padding: 2rem;
   overflow-y: auto;
   color: #1f2937;
-  border-radius: 0 10px 10px 0;
 }
 
 .admin-main h2 {
   font-size: 1.75rem;
   margin-bottom: 1rem;
+}
+
+/* ---------- Mobile Responsiveness ---------- */
+@media (min-width: 1024px) {
+  .menu-icon {
+    display: none;
+  }
+
+  .admin-sidebar {
+    position: relative;
+    transform: translateX(0);
+    top: 0;
+    height: auto;
+    width: 250px;
+  }
+
+  .admin-body {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 1023px) {
+  .admin-body {
+    flex-direction: column;
+  }
+
+  .admin-main {
+    margin-top: 80px; /* space for navbar */
+    padding: 1.5rem;
+  }
+
+  .logout-btn {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
 }

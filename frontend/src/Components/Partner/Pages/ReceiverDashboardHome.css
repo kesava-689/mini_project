@@ -1,6 +1,9 @@
+/* Base Layout */
 .receiver-dashboard-container {
-  min-height: 100vh;
+  min-height: 8rem;
   padding: 2rem;
+  box-sizing: border-box; /* Ensure padding is included in height calculation */
+  overflow: hidden; /* Hide overflow on the container */
 }
 
 .receiver-dashboard-title {
@@ -13,7 +16,7 @@
 
 .sections-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(250px, 1fr));
+  grid-template-columns: repeat(3, minmax(250px, 1fr)); /* 3 columns on larger screens */
   gap: 1.5rem;
 }
 
@@ -47,5 +50,79 @@
 
 .section-description {
   font-size: 0.9rem;
-  color: black; /* softer gray */
+  color: #555; /* softer gray */
 }
+
+/* --------- RESPONSIVE DESIGN --------- */
+
+/* For tablets and medium screens (1024px and smaller) */
+@media (max-width: 1024px) {
+  .sections-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  }
+
+  .receiver-dashboard-title {
+    font-size: 2rem; /* Slightly smaller title */
+  }
+
+  .section-card {
+    padding: 1.5rem; /* Reduced padding for better spacing */
+  }
+
+  .section-title {
+    font-size: 0.95rem; /* Smaller section titles */
+  }
+
+  .section-description {
+    font-size: 0.85rem; /* Smaller descriptions */
+  }
+}
+
+/* For mobile screens (600px and smaller) */
+@media (max-width: 600px) {
+  .receiver-dashboard-container {
+    padding: 1rem; /* Less padding on mobile */
+  }
+
+  .receiver-dashboard-title {
+    font-size: 1.8rem; /* Even smaller title */
+  }
+
+  .sections-grid {
+    grid-template-columns: 1fr; /* 1 column for mobile */
+  }
+
+  .section-card {
+    padding: 1rem; /* Reduced padding */
+    min-height: 150px; /* Reduced min-height for mobile */
+  }
+
+  .section-title {
+    font-size: 0.85rem; /* Smaller font size */
+  }
+
+  .section-description {
+    font-size: 0.8rem; /* Smaller font size */
+  }
+}
+
+/* For very small devices (400px and smaller) */
+@media (max-width: 400px) {
+  .receiver-dashboard-title {
+    font-size: 1.6rem; /* Even smaller title */
+  }
+
+  .section-card {
+    padding: 0.8rem; /* Further reduce padding */
+    min-height: 120px; /* Smaller card size */
+  }
+
+  .section-title {
+    font-size: 0.8rem; /* Further reduced title font size */
+  }
+
+  .section-description {
+    font-size: 0.75rem; /* Further reduced description font size */
+  }
+}
+

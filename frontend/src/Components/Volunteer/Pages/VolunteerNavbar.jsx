@@ -1,7 +1,6 @@
 import "./VolunteerNavbar.css";
 
 import React from "react";
-import logo from "../../../assets/logo.png";
 import { useNavigate } from "react-router-dom";
 
 const DonorNavbar = () => {
@@ -16,7 +15,6 @@ const DonorNavbar = () => {
   return (
     <nav className="donor-navbar">
       <div className="donor-navbar-left">
-        <img src={logo} alt="Logo" className="donor-logo" />
         <span className="system-name">Food Wastage Management</span>
       </div>
       <div className="donor-navbar-right">

@@ -41,12 +41,7 @@ const Hero = () => {
       </div>
 
      {/* Chatbot Panel */}
-     <div className={`chatbot-panel ${showChatbot ? 'open' : ''}`}>
-        {/* --- New Chatbot Header --- */}
-        <div className="chatbot-header">
-          <h2>Need Help? Ask Us!</h2>
-          <p>I'm your assistant for Food Waste Management.</p>
-        </div>
+     <div className={`chatbot-panel ${showChatbot ? 'open' : ''}`}>       
         {/* --- Chatbot Iframe --- */}
         <iframe
           src="https://www.chatbase.co/chatbot-iframe/eDLARBdPf7vISDLK4r9Q7"

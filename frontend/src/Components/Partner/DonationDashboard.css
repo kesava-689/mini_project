@@ -1,17 +1,88 @@
-/* Layout structure */
 .Donor-dashboard-wrapper {
   display: flex;
   flex-direction: column;
   height: 100vh;
   font-family: 'Segoe UI', sans-serif;
-  background: url('../../assets/Background_image_9.png');
+  background: url('../../assets/Background_image_1.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 /* Top Navbar */
-.dashboard-navbar {
+.donor-dashboard-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #014ff9;
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.donor-navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.menu-icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+.donor-navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+/* Logout Button */
+.logout-btn {
+  background: #ef4444;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.logout-btn:hover {
+  background: #dc2626;
+}
+
+/* Main dashboard body layout */
+.donor-dashboard-body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Sidebar toggle for mobile screens */
+.dashboard-sidebar.open {
+  transform: translateX(0); /* Sidebar is visible when toggled */
+}
+
+/* Main Content */
+.donor-dashboard-main {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+  color: white;
+  margin: 1rem;
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+}
+.donor-dashboard-main h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+/* Top Navbar */
+.donor-dashboard-navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -24,7 +95,7 @@
 }
 
 /* Main dashboard body layout */
-.dashboard-body {
+.donor-dashboard-body {
   display: flex;
   flex: 1;
   height: calc(100vh - 80px); /* Assuming navbar height ~80px */
@@ -47,7 +118,6 @@
   flex-direction: column;
   justify-content: space-between;
 }
-
 .dashboard-sidebar ul {
   list-style: none;
   padding: 0;
@@ -67,23 +137,6 @@
   background-color: rgba(255, 255, 255, 0.2);
   font-weight: 600;
 }
-
-/* Main Content */
-.donor-dashboard-main {
-  flex: 1;
-  padding: 2rem;
-  overflow-y: auto;
-  color: #1f2937;
-  margin: 1rem;
-  border-radius: 20px;
-  backdrop-filter: blur(8px);
-}
-
-.donor-dashboard-main h2 {
-  font-size: 1.75rem;
-  margin-bottom: 1rem;
-}
-
 /* Logout Button */
 .logout-btn {
   background: #ef4444;
@@ -99,3 +152,169 @@
 .logout-btn:hover {
   background: #dc2626;
 }
+
+/* --------- RESPONSIVE DESIGN --------- */
+@media (max-width: 1024px) {
+  .donor-dashboard-navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  .donor-dashboard-sidebar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    justify-content: space-around;
+  }
+  .donor-dashboard-sidebar ul {
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-around;
+
+  }
+
+  .donor-dashboard-sidebar li {
+    margin: 0;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+
+  .donor-dashboard-main {
+    margin: 0;
+    padding: 1rem;
+    border-radius: 10px;
+
+  }
+}
+
+/*For mobile screens (760px and smaller) */
+@media (max-width: 760px) {
+  .donor-dashboard-navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  .logout-btn {
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem;
+  }
+
+  .donor-dashboard-sidebar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 100vh;
+    transform: translateX(-100%); /* Initially hidden on mobile */
+  }
+
+  .donor-dashboard-sidebar.open {
+    transform: translateX(0); /* Sidebar slides in when toggled */
+  }
+
+  .donor-dashboard-sidebar ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .donor-dashboard-sidebar li {
+    width: 100%;
+    text-align: left;
+    font-size: 1rem;
+  }
+
+  .donor-dashboard-main {
+    padding: 1rem;
+    margin: 0;
+    border-radius: 10px;
+  }
+
+}
+/* 🔹 For mobile screens (600px and smaller) */
+@media (max-width: 600px) {
+  .donor-dashboard-navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  .logout-btn {
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem;
+  }
+
+  .donor-dashboard-sidebar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 100vh;
+    transform: translateX(-100%); /* Initially hidden on mobile */
+  }
+
+  .donor-dashboard-sidebar.open {
+    transform: translateX(0); /* Sidebar slides in when toggled */
+  }
+
+  .donor-dashboard-sidebar ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .donor-dashboard-sidebar li {
+    width: 100%;
+    text-align: left;
+    font-size: 1rem;
+  }
+
+  .donor-dashboard-main {
+    padding: 1rem;
+    margin: 0;
+    border-radius: 10px;
+  }
+
+  .donor-dashboard-main h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* 🔹 For very small devices (400px and smaller) */
+@media (max-width: 400px) {
+  .donor-dashboard-navbar {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+
+  .donor-logout-btn {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .donor-dashboard-sidebar li {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.8rem;
+  }
+
+  .donor-dashboard-main h2 {
+    font-size: 1.2rem;
+  }
+}
+
